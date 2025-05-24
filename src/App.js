@@ -34,12 +34,21 @@ import './App.css';
 function App(){
   const [quotes, setQuotes] = useState([]);
 
-  useEffect(() => {
-    axios.get("https://dummyjson.com/quotes?limit=1454&skip=0")
-    .then((res) => setQuotes(res.data.quotes))
-    .catch((err) => console.log(err));
-  }, []);
+  const [pages, setPages] = useState(1);
+  const [totalQuotes, setTotalQuotes] = useState(0);
+  const limit = 9;
 
+  useEffect(() => {
+    const skip = (pages-1)*limit;
+    axios.get(`https://dummyjson.com/quotes?limit=${limit}&skip=${skip}`)
+    .then((res) =>{
+      setQuotes(res.data.quotes);
+      setTotalQuotes(res.data.total);
+    })
+    .catch((err) => console.log(err));
+  }, [pages]);
+
+const totalPages = Math.ceil(totalQuotes/limit);
 
   return(
     <div className="App">
@@ -49,6 +58,18 @@ function App(){
           <Card key={ind} quote={quotes}/>
         ))}
       </div>
+      <div className="pagination">
+        <button onClick={() => setPages((pagenum) => Math.max(pagenum-1, 1))} disabled={pages===1}>
+          &lt;&lt;
+        </button>
+
+        <span>Page {pages} of {totalPages}</span>
+
+        <button onClick={() => setPages((pagenum) => Math.min(pagenum+1, totalPages))} disabled={pages===totalPages}>
+          &gt;&gt;
+        </button>
+      </div>
+
       <Footer />
     </div>
   );
