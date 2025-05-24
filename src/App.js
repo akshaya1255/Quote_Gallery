@@ -28,7 +28,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./card";
 import Navbar from "./Navbar";
-
+import Footer from "./Footer";
 import './App.css';
 
 function App(){
@@ -49,6 +49,7 @@ function App(){
           <Card key={ind} quote={quotes}/>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

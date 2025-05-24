@@ -1,0 +1,103 @@
+.foot{
+    position: relative;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    background-color: #e8dcd1;
+}
+
+.foot-list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    padding-bottom: 0;
+}
+
+.foot-list-div{
+    display: flex;
+    justify-content: center;
+}
+
+.foot-item{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding: 5px;
+    margin: 0;
+}
+.foot-item a{
+    text-decoration: none;
+    color: #913a32;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.foot-text{
+
+    margin-top: 2px;
+    padding: 0;
+}
+
+.foot-text1{
+    font-size: small;
+    text-align: center;
+    margin: 1px;
+    color: #913a32;
+}
+
+.foot-text2{
+    font-size: smaller;
+    text-align: center;
+    margin: 1px;
+    color: #913a32;
+}
+
+.foot-divider{
+    border: 0;
+    border-top: 1px solid #913a32;
+    margin-bottom:5px
+}
+
+.socials{
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    margin: 0;
+}
+
+.socials h4{
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #913a32;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.social-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-item{
+    margin: 2px 0;
+}
+
+.social-links{
+    text-decoration: none;
+    color: #ac3f35;
+    gap: 8px;
+}
+
+.social-links:hover{
+    color: #913a32;
+}
+
