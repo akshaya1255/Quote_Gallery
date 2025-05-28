@@ -2,8 +2,8 @@
 
 ---
 
-A React based frontend project that fetches and displays 1454 quotes.
-The quotes are presented in a clean, simple theme based UI with simple animations along with a Navbar and responsive design.
+A React based frontend project that fetches and displays quotes.
+The quotes are presented in a clean, simple theme based UI with simple animations along with a Navbar, Footer and various other features which are explained below.
 
 ---
 
@@ -27,21 +27,30 @@ Instead of fetching and displaying all the data at once, pagination is added whi
 
 ![image](https://github.com/user-attachments/assets/55b18bb9-353f-4ada-a266-790eb7322569)
 
-Version - 4 (after adding routing, loaders and responsiveness)
+Version - 4 (after adding loader, detailed card, routing and responsiveness)
 
 Loader/Spinner:
+
+Added a spinner to the display when the data is still being fetched from the API.
 
 ![Screenshot 2025-05-28 180548](https://github.com/user-attachments/assets/13e15f59-66dc-4af8-973b-54787d0f8c01)
 
 Detailed card:
 
+When user clicks on any card on the home page, they will get directed to a page where there is a detailed explanation of the selected card details which also contains a button to go back to home page easily.
+(right now the detailed page just contains the quote and the author but this can be improved later).
+
 ![image](https://github.com/user-attachments/assets/15bbf6eb-e4ec-4a5c-a5ac-31258c48ca28)
 
 Routing:
 
+Routing is added with react-router-dom to change the path in the URL and also the effective change of displayed content.
+
 ![image](https://github.com/user-attachments/assets/f8fa65f6-d576-442d-bf57-b9fdbcebecd0)
 
 Responsiveness: (on various devices)
+
+The website is made responsive using media queries, which can be seen in the following screenshots.
 
 ![Screenshot 2025-05-28 180345](https://github.com/user-attachments/assets/09e54624-4448-426d-baca-bc2fcea5b21b)
 
